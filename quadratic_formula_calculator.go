@@ -25,7 +25,7 @@ func main() {
 	fmt.Println("\n\x1b[35mYou want to solve:")
 	fmt.Printf("%fx²+%fx+%f=0\n\x1b[30m", a, b, c)
 	// This calculates the discriminant and determines the solutions.
-	discriminant := (b * b) - (4 * a * c)
+	discriminant := math.Pow(b, 2) - (4 * a * c)
 	if discriminant < 0 {
 		negativeDiscriminant := (cmplx.Sqrt(complex(discriminant, 0)))
 		complexA := complex(a, 0)
