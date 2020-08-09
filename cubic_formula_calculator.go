@@ -14,9 +14,9 @@ func main() {
 		a, b, c, d float64
 	)
 	// This asks for the necessary user input.
-	fmt.Println("Please enter the a, b, and c coefficients for the cubic equation",
-		"equation, and it will be solved (ax³+bx²+cx+d=0).")
-	fmt.Println("a:")
+	fmt.Println("\n\x1b[31mPlease enter the a, b, and c coefficients for the cubic equation",
+		"equation, and it will be solved (ax³+bx²+cx+d=0).\x1b[30m")
+	fmt.Println("\x1b[32ma:")
 	fmt.Scanf("%f", &a)
 	fmt.Println("b:")
 	fmt.Scanf("%f", &b)
@@ -24,8 +24,8 @@ func main() {
 	fmt.Scanf("%f", &c)
 	fmt.Println("d:")
 	fmt.Scanf("%f", &d)
-	fmt.Println("You want to solve:")
-	fmt.Printf("%fx³+%fx²+%fx+%f=0\n", a, b, c, d)
+	fmt.Println("\n\x1b[35mYou want to solve:")
+	fmt.Printf("%fx³+%fx²+%fx+%f=0\n\x1b[30m", a, b, c, d)
 	// This calculates the discriminant.
 	discriminant := (18 * a * b * c * d) - (4 * math.Pow(b, 3) * d) + (math.Pow(b, 2) * math.Pow(c, 2)) - (4 * a * math.Pow(c, 3)) - (27 * math.Pow(a, 2) * math.Pow(d, 2))
 	delta0 := math.Pow(b, 2) - (3 * a * c)
@@ -48,7 +48,7 @@ func main() {
 		x1 := -1 / (3 * complexA) * (complexB + C + complexDelta0/C)
 		x2 := -1 / (3 * complexA) * (complexB + (cmplx.Pow(primitiveCubeRootOfUnity, k1) * C) + complexDelta0/(cmplx.Pow(primitiveCubeRootOfUnity, k1)*C))
 		x3 := -1 / (3 * complexA) * (complexB + (cmplx.Pow(primitiveCubeRootOfUnity, k2) * C) + complexDelta0/(cmplx.Pow(primitiveCubeRootOfUnity, k2)*C))
-		fmt.Println("Answers:", x1, x2, x3)
+		fmt.Println("\x1b[36mAnswers:", x1, ",", x2, ",", x3, ".\n\x1b[30m")
 	} else if discriminant < 0 {
 		if delta0 == 0 {
 			// This converts the variables to complex.
@@ -68,7 +68,7 @@ func main() {
 			x1 := -1 / (3 * complexA) * (complexB + C + complexDelta0/C)
 			x2 := -1 / (3 * complexA) * (complexB + (cmplx.Pow(primitiveCubeRootOfUnity, k1) * C) + complexDelta0/(cmplx.Pow(primitiveCubeRootOfUnity, k1)*C))
 			x3 := -1 / (3 * complexA) * (complexB + (cmplx.Pow(primitiveCubeRootOfUnity, k2) * C) + complexDelta0/(cmplx.Pow(primitiveCubeRootOfUnity, k2)*C))
-			fmt.Println("Answers:", x1, x2, x3)
+			fmt.Println("\x1b[36mAnswers:", x1, ",", x2, ",", x3, ".\n\x1b[30m")
 		} else {
 			// This converts the variables to complex.
 			complexA := complex(a, 0)
@@ -87,17 +87,17 @@ func main() {
 			x1 := -1 / (3 * complexA) * (complexB + C + complexDelta0/C)
 			x2 := -1 / (3 * complexA) * (complexB + (cmplx.Pow(primitiveCubeRootOfUnity, k1) * C) + complexDelta0/(cmplx.Pow(primitiveCubeRootOfUnity, k1)*C))
 			x3 := -1 / (3 * complexA) * (complexB + (cmplx.Pow(primitiveCubeRootOfUnity, k2) * C) + complexDelta0/(cmplx.Pow(primitiveCubeRootOfUnity, k2)*C))
-			fmt.Println("Answers:", x1, x2, x3)
+			fmt.Println("\x1b[36mAnswers:", x1, ",", x2, ",", x3,".\n\x1b[30m")
 		}
 	} else {
 		// This ensures that the cubic equation solver can also find the solutions for roots that have a multiplicity greater than 1.
 		if delta0 == 0 {
 			x1 := (-1 * b) / (3 * a)
-			fmt.Println("Answer:", x1)
+			fmt.Println("\x1b[36mAnswers:", x1, ".\n\x1b[30m")
 		} else {
 			x1 := (9*a*d - b*c) / (2 * delta0)
 			x2 := (4*a*b*c - 9*math.Pow(a, 2)*d - math.Pow(b, 3)) / (a * delta0)
-			fmt.Println("Answers:", x1, x2)
+			fmt.Println("\x1b[36mAnswers:", x1, ",", x2, ".\n\x1b[30m")
 		}
 
 	}	

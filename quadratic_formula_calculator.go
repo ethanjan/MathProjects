@@ -32,7 +32,7 @@ func main() {
 		complexB := complex(b, 0)
 		result1 := ((complexB * -1) + negativeDiscriminant) / (2 * complexA)
         	result2 := ((complexB * -1) - negativeDiscriminant) / (2 * complexA)
-		fmt.Println("\x1b[36mThe solutions are:", result1,",", result2, ".\n\x1b[30m")
+		fmt.Println("\x1b[36mThe solutions are:", result1, ",", result2, ".\n\x1b[30m")
 	}
 	if discriminant > 0 {
 		result1 := ((b * -1) + math.Sqrt(discriminant)) / (2 * a)
