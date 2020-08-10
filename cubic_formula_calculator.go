@@ -1,13 +1,11 @@
-// TODO
 package main
-// This imports all of the necessary packages.
+
 import (
 	"fmt"
 	"math"
 	"math/cmplx"
 )
 
-// This starts the program.
 func main() {
 	// This declares all of the necessary initial variables.
 	var (
@@ -38,7 +36,7 @@ func main() {
 		complexDelta1 := complex(delta1, 0)
 		place := math.Pow((delta1+math.Sqrt(math.Pow(delta1, 2)-(4*math.Pow(delta0, 3))))/2, 1.0/3.0)
 		C := cmplx.Pow((complexDelta1+cmplx.Sqrt(cmplx.Pow(complexDelta1, 2)-(4*cmplx.Pow(complexDelta0, 3))))/2, 1.0/3.0)
-		if (place == 0) {
+		if place == 0 {
 			C = cmplx.Pow((complexDelta1-cmplx.Sqrt(cmplx.Pow(complexDelta1, 2)-(4*cmplx.Pow(complexDelta0, 3))))/2, 1.0/3.0)
 		}
 		primitiveCubeRootOfUnity := complex(-0.5, 0.5*math.Sqrt(3)*1)
@@ -58,7 +56,7 @@ func main() {
 			complexDelta1 := complex(delta1, 0)
 			place := math.Pow((delta1+math.Sqrt(math.Pow(delta1, 2)-(4*math.Pow(delta0, 3))))/2, 1.0/3.0)
 			C := cmplx.Pow((complexDelta1+cmplx.Sqrt(cmplx.Pow(complexDelta1, 2)-(4*cmplx.Pow(complexDelta0, 3))))/2, 1.0/3.0)
-			if (place == 0) {
+			if place == 0 {
 				C = cmplx.Pow((complexDelta1-cmplx.Sqrt(cmplx.Pow(complexDelta1, 2)-(4*cmplx.Pow(complexDelta0, 3))))/2, 1.0/3.0)
 			}
 			primitiveCubeRootOfUnity := complex(-0.5, 0.5*math.Sqrt(3)*1)
@@ -77,7 +75,7 @@ func main() {
 			complexDelta1 := complex(delta1, 0)
 			place := math.Pow((delta1+math.Sqrt(math.Pow(delta1, 2)-(4*math.Pow(delta0, 3))))/2, 1.0/3.0)
 			C := cmplx.Pow((complexDelta1+cmplx.Sqrt(cmplx.Pow(complexDelta1, 2)-(4*cmplx.Pow(complexDelta0, 3))))/2, 1.0/3.0)
-			if (place == 0) {
+			if place == 0 {
 				C = cmplx.Pow((complexDelta1-cmplx.Sqrt(cmplx.Pow(complexDelta1, 2)-(4*cmplx.Pow(complexDelta0, 3))))/2, 1.0/3.0)
 			}
 			primitiveCubeRootOfUnity := complex(-0.5, 0.5*math.Sqrt(3)*1)
@@ -87,7 +85,7 @@ func main() {
 			x1 := -1 / (3 * complexA) * (complexB + C + complexDelta0/C)
 			x2 := -1 / (3 * complexA) * (complexB + (cmplx.Pow(primitiveCubeRootOfUnity, k1) * C) + complexDelta0/(cmplx.Pow(primitiveCubeRootOfUnity, k1)*C))
 			x3 := -1 / (3 * complexA) * (complexB + (cmplx.Pow(primitiveCubeRootOfUnity, k2) * C) + complexDelta0/(cmplx.Pow(primitiveCubeRootOfUnity, k2)*C))
-			fmt.Println("\x1b[36mAnswers:", x1, ",", x2, ",", x3,".\n\x1b[30m")
+			fmt.Println("\x1b[36mAnswers:", x1, ",", x2, ",", x3, ".\n\x1b[30m")
 		}
 	} else {
 		// This ensures that the cubic equation solver can also find the solutions for roots that have a multiplicity greater than 1.
@@ -100,5 +98,5 @@ func main() {
 			fmt.Println("\x1b[36mAnswers:", x1, ",", x2, ".\n\x1b[30m")
 		}
 
-	}	
+	}
 }

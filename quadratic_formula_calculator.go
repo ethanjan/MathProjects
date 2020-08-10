@@ -1,17 +1,15 @@
 package main
 
-// This imports all of the necessary packages.
 import (
 	"fmt"
-	"math/cmplx"
 	"math"
+	"math/cmplx"
 )
 
-// This begins the program.
 func main() {
 	// This declares the necessary variables.
 	var (
-	a, b, c float64
+		a, b, c float64
 	)
 	// This asks the user to input the necessary values.
 	fmt.Println("\n\x1b[31mPlease enter the a, b, and c coefficients for the quadratic",
@@ -31,16 +29,16 @@ func main() {
 		complexA := complex(a, 0)
 		complexB := complex(b, 0)
 		result1 := ((complexB * -1) + negativeDiscriminant) / (2 * complexA)
-        	result2 := ((complexB * -1) - negativeDiscriminant) / (2 * complexA)
+		result2 := ((complexB * -1) - negativeDiscriminant) / (2 * complexA)
 		fmt.Println("\x1b[36mThe solutions are:", result1, ",", result2, ".\n\x1b[30m")
 	}
 	if discriminant > 0 {
 		result1 := ((b * -1) + math.Sqrt(discriminant)) / (2 * a)
-                result2 := ((b * -1) - math.Sqrt(discriminant)) / (2 * a)
-                fmt.Println("\x1b[36mThe solutions are:", result1, ",", result2, ".\n\x1b[30m")
+		result2 := ((b * -1) - math.Sqrt(discriminant)) / (2 * a)
+		fmt.Println("\x1b[36mThe solutions are:", result1, ",", result2, ".\n\x1b[30m")
 	}
 	if discriminant == 0 {
 		result1 := ((b * -1) + math.Sqrt(discriminant)) / (2 * a)
-                fmt.Println("\x1b[36mThe solution is:", result1, ".\n\x1b[30m")
+		fmt.Println("\x1b[36mThe solution is:", result1, ".\n\x1b[30m")
 	}
 }
