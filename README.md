@@ -1,7 +1,7 @@
-# Math Projects
+# 8th Grade Math Projects
 
 ## Implementation
-Both the quadratic equation solver and the cubic equation solver have been implemented by utilizing the programming language known as Golang, which was developed by Google. The quadratic equation solver utilizes the traditional quadratic formula, whereas the cubic equation solver utilizes a more complicated method to find all of the solutions (real and imaginary) to any cubic equation.
+Both the quadratic equation solver and the cubic equation solver have been implemented by utilizing the programming language known as Golang, which was developed by Google. The quadratic equation solver utilizes the traditional quadratic formula, whereas the cubic equation solver utilizes a more complicated method to find all of the solutions (real and **imaginary**) to any cubic equation.
 
 ## Prerequisites
 To be able to utilize these programs, it is necessary to install Golang or to use an online editor. Furthermore, these programs should be run in an environment that facilitates user input.
